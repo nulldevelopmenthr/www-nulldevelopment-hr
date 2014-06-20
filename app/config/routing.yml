@@ -1,0 +1,4 @@
+null_dev_base:
+    resource: "@NullDevBaseBundle/Resources/config/routing.yml"
+    prefix:   /
+
