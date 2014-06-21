@@ -10,4 +10,8 @@ class MainPageController extends Controller
     {
         return $this->render('NullDevBaseBundle:MainPage:index.html.twig');
     }
+    public function impressumAction()
+    {
+        return $this->render('NullDevBaseBundle:MainPage:impressum.html.twig');
+    }
 }
