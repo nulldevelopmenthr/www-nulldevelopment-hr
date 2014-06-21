@@ -21,3 +21,8 @@
 
 #.htaccess folder
 /web/.htaccess
+
+#Ignoring app_dev.php
+/web/app_dev.php
+/web/static/css/
+/web/static/js/
