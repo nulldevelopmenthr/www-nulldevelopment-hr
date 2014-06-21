@@ -6,3 +6,9 @@ null_dev_base_impressum:
     pattern:  /impressum
     defaults: { _controller: NullDevBaseBundle:MainPage:impressum }
 
+root:
+    path: /about.html
+    defaults:
+        _controller: FrameworkBundle:Redirect:redirect
+        route: null_dev_base_impressum
+        permanent: true
