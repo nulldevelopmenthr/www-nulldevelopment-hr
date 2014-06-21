@@ -1,5 +1,13 @@
 DirectoryIndex app.php
 
+
+<FilesMatch "\.(jpe?g|png|gif|ico|css|js)$">
+    ExpiresActive On
+    ExpiresDefault "access plus 1 year"
+</FilesMatch>
+
+
+
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
