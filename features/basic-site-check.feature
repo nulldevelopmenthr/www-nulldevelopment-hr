@@ -5,6 +5,19 @@ Feature: Basic site check
 
   Scenario: Check that homepage works
 	Given I am on "/"
-	And I click "Project name"
-	Then I should see "Hello, world!"
+	And I click "Null Development"
+	Then I should see "> /dev/null"
+	And I should be on "/"
+
+  Scenario: Check that impressum is available from homepage
+	Given I am on "/"
+	And I click "Impressum"
+	Then I should see "Legal information"
+	And I should see "Pravni podaci"
+	And I should be on "/impressum"
+
+  Scenario: Check that homepage is available from impressum
+	Given I am on "/impressum"
+	And I click "Null Development"
+	Then I should see "> /dev/null"
 	And I should be on "/"
