@@ -1,4 +1,12 @@
-Symfony Standard Edition
+Home of www.nulldevelopment.hr
+========================
+
+Initial commit.
+
+
+
+
+Symfony 2 Starter Kit
 ========================
 
 Based on "Symfony Standard Edition" with some additional features added in.
