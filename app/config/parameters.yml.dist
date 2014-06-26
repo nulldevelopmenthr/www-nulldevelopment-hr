@@ -3,7 +3,7 @@ parameters:
     database_driver:   pdo_mysql
     database_host:     127.0.0.1
     database_port:     ~
-    database_name:     sf2sk
+    database_name:     www_nulldevelopment_hr
     database_user:     root
     database_password: ~
     # You should uncomment this if you want use pdo_sqlite
@@ -23,13 +23,13 @@ parameters:
     debug_redirects:        false
     use_assetic_controller: true
 
-    app_name:          sf2sk
-    application_base:  /var/www/sites/sf2sk
-    app_domain:        www.sf2sk.loc
-    static_domain:     static.sf2sk.loc
-    img_domain:        img1.sf2sk.loc
-    img_domains:
-      - img1.sf2sk.loc
+    app_name:          nulldevelopmenthr
+    application_base:  /var/www/sites/www.nulldevelopment.hr
+    app_domain:        www.nulldevelopment.hr
+    static_domain:     static.nulldevelopment.hr
+    img_domain:        img1.nulldevelopment.hr
+    img_domains: 
+      - img1.nulldevelopment.hr
 
 
 
