@@ -8,10 +8,21 @@ class MainPageController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('NullDevBaseBundle:MainPage:index.html.twig');
+        $response = $this->render('NullDevBaseBundle:MainPage:index.html.twig');
+
+        $response->setPublic();
+        $response->setSharedMaxAge(10 * $this->container->getParameter('esi_cache_multiplier'));
+
+        return $response;
     }
+
     public function impressumAction()
     {
-        return $this->render('NullDevBaseBundle:MainPage:impressum.html.twig');
+        $response = $this->render('NullDevBaseBundle:MainPage:impressum.html.twig');
+
+        $response->setPublic();
+        $response->setSharedMaxAge(10 * $this->container->getParameter('esi_cache_multiplier'));
+
+        return $response;
     }
 }
