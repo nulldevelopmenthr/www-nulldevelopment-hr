@@ -22,13 +22,15 @@ parameters:
     debug_toolbar:          true
     debug_redirects:        false
     use_assetic_controller: true
+    trusted_proxies:        '127.0.0.1'
+    esi_cache_multiplier:   60
 
     app_name:          nulldevelopmenthr
     application_base:  /var/www/sites/www.nulldevelopment.hr
     app_domain:        www.nulldevelopment.hr
     static_domain:     static.nulldevelopment.hr
     img_domain:        img1.nulldevelopment.hr
-    img_domains: 
+    img_domains:
       - img1.nulldevelopment.hr
 
 

@@ -1,5 +1,5 @@
 framework:
-    #esi:             ~
+    esi: { enabled: true }
     translator:      { fallback: "%locale%" }
     secret:          "%secret%"
     router:
@@ -13,9 +13,9 @@ framework:
         assets_version: v01
     default_locale:  "%locale%"
     trusted_hosts:   ~
-    trusted_proxies: ~
+    trusted_proxies: [%trusted_proxies%]
     session:
         # handler_id set to null will use default session handler from php.ini
         handler_id:  ~
-    fragments:       ~
+    fragments:       { path: /_fragment }
     http_method_override: true
