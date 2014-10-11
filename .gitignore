@@ -29,3 +29,6 @@
 
 #Ignoring .vagrant folder
 /.vagrant
+
+#Ignoring SonataMedia upload folder
+/web/uploads/media/
