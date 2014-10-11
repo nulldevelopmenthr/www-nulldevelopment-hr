@@ -1,6 +1,9 @@
 Home of www.nulldevelopment.hr
 ========================
 
+Working on ESI & caching.
+==========
+
 Initial commit.
 
 
