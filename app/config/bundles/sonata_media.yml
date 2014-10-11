@@ -17,6 +17,14 @@ sonata_media:
             formats:
                 small: { width: 100 , quality: 70}
                 big:   { width: 500 , quality: 70}
+                wide:     { width: 820, quality: 100}
+        news:
+            providers:
+                - sonata.media.provider.image
+
+            formats:
+                abstract: { width: 100, quality: 100}
+                wide:     { width: 820, quality: 100}
 
     cdn:
         server:
