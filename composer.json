@@ -19,7 +19,10 @@
         "sensio/framework-extra-bundle": "~3.0",
         "incenteev/composer-parameter-handler": "~2.0",
 
-        "friendsofsymfony/user-bundle": "~1.3"
+        "friendsofsymfony/user-bundle": "~1.3",
+
+        "sonata-project/admin-bundle": "~2.3",
+        "sonata-project/doctrine-orm-admin-bundle": "~2.3"
 
     },
     "require-dev": {

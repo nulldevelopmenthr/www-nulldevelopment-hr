@@ -7,6 +7,8 @@ imports:
     - { resource: main/doctrine.yml }
     - { resource: main/swiftmailer.yml }
     - { resource: bundles/fos_user.yml }
+    - { resource: bundles/sonata_block.yml }
+    - { resource: bundles/sonata_admin.yml }
 
 
 
