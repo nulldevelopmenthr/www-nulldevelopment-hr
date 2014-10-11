@@ -1,0 +1,81 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    <div class="container">
+        <h1>Blog</h1>
+
+        {% block sonata_page_breadcrumb %}
+            <div class="row-fluid clearfix">
+                {{ sonata_block_render_event('breadcrumb', { 'context': 'news_archive', 'collection': collection, 'tag': tag, 'current_uri': app.request.requestUri }) }}
+            </div>
+        {% endblock %}
+
+
+        {% for post in pager.getResults() %}
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="sonata-blog-post-content">
+                        {% media post.image, 'medium' %}
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <header>
+                        <h2 class="sonata-blog-post-title">
+                            <a href="{{ url('sonata_news_view', { 'permalink': sonata_news_permalink(post) }) }}">{{ post.title }}</a>
+                        </h2>
+
+                        <div class="sonata-blog-post-information">
+                            <span class="sonata-blog-post-author">{{ 'archive_author'|trans({'%author%': post.author }, 'SonataNewsBundle') }}</span>
+                            |
+
+                            <i class="icon-calendar"></i>
+                            {{ post.publicationDateStart | format_date }} |
+
+                            <i class="icon-comment"></i>
+                            <span class="sonata-blog-post-comments-count">{{ 'comments_count'|trans({'%comments_count%': post.commentsCount }, 'SonataNewsBundle') }}</span>
+                            {#
+
+                                                        <div class="sonata-blog-post-tags">
+
+                                                            <i class="icon-collection"></i> Under
+                                                            <a href="{{ url('sonata_news_collection', { 'collection': post.collection.slug } ) }}">{{ post.collection.name }}</a> |
+
+                                                            {% if post.tags|length > 1 %}
+                                                                <i class="icon-tags"></i>
+                                                            {% else %}
+                                                                <i class="icon-tag"></i>
+                                                            {% endif %}
+                                                            {{ 'published_under'|transchoice(post.tags|length, {}, 'SonataNewsBundle') }}
+
+                                                            {% for tag in post.tags %}
+                                                                <a href="{{ url('sonata_news_tag', { 'tag': tag.slug } ) }}">{{ tag.name }}</a>{% if not loop.last %},{% endif %}
+                                                            {% endfor %}
+                                                        </div>
+                            #}
+                        </div>
+                    </header>
+                    <br/>
+                    <div class="sonata-blog-post-abtract">
+                        {{ post.abstract }}
+                    </div>
+                </div>
+            </div>
+            <hr/>
+        {% else %}
+            {{ 'no_post_found'|trans({}, 'SonataNewsBundle') }}
+        {% endfor %}
+
+            <ul class="pager">
+                <li{% if pager.page == pager.lastPage %} class="disabled"{% endif %}>
+                    <a href="{{ url(route, route_parameters|merge({'page': pager.nextpage})) }}" title="{{ 'link_previous_page'|trans({}, 'SonataNewsBundle') }}">{{ 'link_previous_page'|trans({}, 'SonataNewsBundle') }}</a>
+                <li{% if pager.page == pager.firstPage %} class="disabled"{% endif %}>
+                    <a href="{{ url(route, route_parameters|merge({'page': pager.previouspage})) }}" title="{{ 'link_next_page'|trans({}, 'SonataNewsBundle') }}">{{ 'link_next_page'|trans({}, 'SonataNewsBundle') }}</a>
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+
+{% endblock %}
+
