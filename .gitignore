@@ -37,4 +37,6 @@
 #Ignoring shell scripts in root folder
 /*.sh
 
+#Ignoring SonataMedia upload folder
+/web/uploads/media/
 
