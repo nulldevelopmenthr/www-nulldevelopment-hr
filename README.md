@@ -3,6 +3,10 @@ Symfony 2 Starter Kit
 
 Based on "Symfony Standard Edition" with some additional features added in.
 
+2014-10-24
+=====
+Version: 2.5.6
+
 2014-10-11
 =====
 Version: 2.5.5
