@@ -1,0 +1,23 @@
+default:
+    formatters:
+        pretty:
+            verbose:  true
+            paths:    false
+            snippets: false
+
+    suites:
+        web:
+            contexts:
+                - FeatureContext
+
+    extensions:
+        Behat\MinkExtension:
+            base_url: http://www.bodulapp.loc/
+            sessions:
+                default:
+                    symfony2: ~
+                javascript:
+                    selenium2: ~
+            browser_name: firefox
+            show_auto:    false
+        Behat\Symfony2Extension: ~
