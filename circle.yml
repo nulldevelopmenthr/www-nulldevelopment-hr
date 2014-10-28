@@ -1,0 +1,10 @@
+machine:
+  php:
+    version: 5.5.11
+test:
+  override:
+    - ./bin/phpunit
+    - ./bin/behat
+    - ./bin/phpspec run
+
+  
