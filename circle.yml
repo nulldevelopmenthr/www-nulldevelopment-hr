@@ -1,6 +1,9 @@
 machine:
   php:
     version: 5.5.11
+dependencies:
+  post:
+    - php app/console assetic:dump --env=prod --no-debug    
 test:
   override:
     - ./bin/phpunit
