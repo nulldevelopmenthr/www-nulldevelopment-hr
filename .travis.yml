@@ -9,3 +9,5 @@ before_script:
 
 script:
   - ./bin/phpunit
+  - ./bin/behat
+  - ./bin/phpspec run
