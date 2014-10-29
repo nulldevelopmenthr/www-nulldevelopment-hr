@@ -12,3 +12,7 @@ script:
   - ./bin/phpunit
   - ./bin/behat
   - ./bin/phpspec run
+  - ./bin/phpmd src/ text phpmd.xml --exclude 'DependencyInjection/Configuration.php,DependencyInjection/*Extension.php'
+  - ./bin/phpmd app/ text phpmd.xml --exclude 'cache/prod/,SymfonyRequirements.php,AppKernel.php'
+  - ./bin/phpcs --standard=phpcs.xml src/ -n
+  - ./bin/phpcs --standard=phpcs.xml app/ -n
