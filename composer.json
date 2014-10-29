@@ -32,7 +32,9 @@
         "behat/mink-selenium2-driver":       "~1.2",
         "behat/mink":                        "~1.6",
         "fzaninotto/faker":                  "~1.2",
-        "phpspec/phpspec":                   "~2.0"
+        "phpspec/phpspec":                   "~2.0",
+        "phpmd/phpmd":                       "~2.1",
+        "squizlabs/php_codesniffer":         "~1.5"
     },
     "scripts": {
         "post-root-package-install": [
