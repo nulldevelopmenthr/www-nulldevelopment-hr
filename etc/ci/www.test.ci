@@ -1,0 +1,21 @@
+Listen 8443
+
+<VirtualHost *:8443>
+  LoadModule php5_module /home/ubuntu/.phpenv/versions/PHP_VERSION/libexec/libphp5.so
+  SSLEngine on
+  SSLCertificateFile /etc/ssl/crt/server.crt
+  SSLCertificateKeyFile /etc/ssl/crt/server.key
+
+  DocumentRoot /home/ubuntu/PROJECT_NAME/web/
+  ServerName www.test.ci
+
+  <Directory "/home/ubuntu/PROJECT_NAME/web/">
+      Options All
+      AllowOverride All
+  </Directory>
+	ErrorLog /var/log/apache2/PROJECT_NAME-error.log
+	LogLevel warn
+
+	CustomLog /var/log/apache2/PROJECT_NAME-access.log combined
+	ServerSignature On
+</VirtualHost>
