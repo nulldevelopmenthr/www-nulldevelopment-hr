@@ -3,22 +3,22 @@ parameters:
     database_driver: pdo_mysql
     database_host: 127.0.0.1
     database_port: null
-    database_name: symfony
+    database_name: www_nulldevelopment_hr
     database_user: root
-    database_password: simplePassword
+    database_password: Example123
     mailer_transport: smtp
     mailer_host: 127.0.0.1
     mailer_user: null
     mailer_password: null
     locale: en
-    secret: ThisTokenIsNotSoSecretChangeIt
-    app_name: sf2sk
-    application_base: /var/www/sites/sf2sk
-    app_domain: www.sf2sk.loc
-    static_domain: static.sf2sk.loc
-    img_domain: img1.sf2sk.loc
+    secret: VerySecretKeyThatIWasSuggestedToChange
+    app_name: nulldevelopmenthr
+    application_base: /var/www/sites/nulldevelopmenthr
+    app_domain: www.nulldevelopment.loc
+    static_domain: static.nulldevelopment.loc
+    img_domain: img1.nulldevelopment.loc
     img_domains:
-        - img1.sf2sk.loc
+        - img1.nulldevelopment.loc
     deploy_username: vagrant
     deploy_password: vagrant
     debug_toolbar: true
