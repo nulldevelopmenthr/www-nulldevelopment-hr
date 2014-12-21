@@ -30,3 +30,11 @@
 
 #Ignoring .vagrant folder
 /.vagrant
+
+#Ignoring tmp folder
+/tmp
+
+#Ignoring shell scripts in root folder
+/*.sh
+
+
